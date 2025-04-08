@@ -5,6 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Gran Triunfo de Ada y Byte</title>
     <link rel="stylesheet" href="styleepilogo.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #00ffcc, #0066ff);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            filter: brightness(1.1);
+            animation: backgroundAnimation 10s infinite alternate;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #00ffcc, #0066ff); }
+            50% { background: linear-gradient(135deg, #ff66cc, #6600ff); }
+            100% { background: linear-gradient(135deg, #00ffcc, #0066ff); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); }
+            100% { text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.9); }
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 10px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { text-shadow: 0 0 5px #ffcc00; }
+            50% { text-shadow: 0 0 15px #ffcc00; }
+            100% { text-shadow: 0 0 5px #ffcc00; }
+        }
+
+        img {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
+            animation: zoomIn 1.5s ease-out;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        button {
+            background-color: #ff6600;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #ff3300;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(255, 99, 0, 0.8);
+        }
+    </style>
 </head>
 <body>
     <h1>¡El Gran Triunfo de Ada y Byte!</h1>
@@ -22,21 +115,7 @@
 
     <p>Y así, con el mundo digital restaurado y más fuerte que nunca, Ada y Byte miraron al futuro con esperanza. Sabían que siempre habría nuevos desafíos, pero también sabían que, mientras estuvieran juntos, no habría problema que no pudieran superar.</p>
 
-    <h3>Lecciones que Aprendieron Ada y Byte:</h3>
-    <ul>
-        <li><strong>No tener miedo de pedir ayuda:</strong> Todos necesitamos apoyo de vez en cuando.</li>
-        <li><strong>Aprender de los errores:</strong> Los tropiezos son parte del viaje y nos enseñan cosas valiosas.</li>
-        <li><strong>Seguir adelante:</strong> Aunque las cosas se pongan difíciles, nunca hay que rendirse. ¡Siempre hay una solución!</li>
-        <li><strong>Creer en ti mismo:</strong> Si tú lo crees, puedes hacerlo. ¡El poder está en ti!</li>
-    </ul>
-
-    <p>Pero este no es el final... ¡Es solo el comienzo de muchas más aventuras por venir! Ada y Byte tienen mucho más por descubrir, y tal vez tú también puedas acompañarlos en su próxima gran misión. ¿Estás listo?</p>
-
-    <p>¡Gracias por ser parte de esta aventura! Recuerda, lo más importante no es el destino, sino disfrutar del viaje y aprender en cada paso. ¡Te esperamos en la próxima misión!</p>
-    <p>👏👏👏</p>
-
-    <hr>
-
-    <p><button onclick="location.href='index.html'" style="background-color: #00ffcc; color: #ffffff; border: none; padding: 10px 20px; font-size: 1.2rem; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Volver al inicio</button></p>
+    <img src="Imagenes/Diseño sin título (4).png" alt="Ada y Byte celebrando" class="active" style="width: 80%; max-width: 800px; animation: zoomIn 1.5s ease-out;">
+    <button onclick="location.href='agradecimientos.html'">Volver al inicio</button>
 </body>
 </html>

@@ -59,20 +59,22 @@ Abre el archivo index.html en tu navegador.
 
 ¡Y empieza la aventura junto a Ada y Byte!
 
-💡 Ideas y sugerencias
+## 💡 Ideas y sugerencias
+
 Este proyecto está vivo y siempre abierto a mejoras. Si tienes:
 
-Ideas nuevas para aventuras, personajes o minijuegos.
-
-Sugerencias pedagógicas o de accesibilidad.
-
-Ganas de colaborar o expandir el universo de Ada y Byte...
+- 💭 Ideas nuevas para aventuras, personajes o minijuegos.
+- 🎓 Sugerencias pedagógicas o de accesibilidad.
+- 🤝 Ganas de colaborar o expandir el universo de Ada y Byte...
 
 ¡No dudes en abrir un issue o enviar un pull request! 💬✨
 
-👩‍🎨 Autora
-Creado con cariño por Julia Marín, analista de datos, escritora y apasionada de la tecnología, el arte y la educación.
-Este proyecto nace como parte de mis primeros pasos en programación, y refleja mi ilusión por aprender creando cosas que puedan inspirar también a los demás.
+---
 
-Mi sueño es acercar la tecnología a los más pequeños, de forma sencilla, creativa y llena de imaginación.
+## 👩‍🎨 Autora
+
+Creado con cariño por **Julia Marín**, analista de datos, escritora y apasionada de la tecnología, el arte y la educación.  
+Este proyecto nace como parte de mis **primeros pasos en programación**, y refleja mi ilusión por aprender creando cosas que puedan inspirar también a los demás.
+
+🌱 Mi sueño es acercar la tecnología a los más pequeños, de forma sencilla, creativa y llena de imaginación.  
 Gracias por formar parte de este comienzo 💚

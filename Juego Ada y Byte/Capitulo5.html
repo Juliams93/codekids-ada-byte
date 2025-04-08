@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 5 - El enfrentamiento con el Profesor Null</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Capítulo 5: El Enfrentamiento con el Profesor Null</h1>
+        <p>El templo retumba mientras Ada y Byte atraviesan su sala central. Una figura oscura emerge entre el código corrupto, sus ojos brillando con líneas verdes de datos maliciosos.</p>
+        <p><em>—¡Ada! —grita Byte—. ¡Es él! ¡El Profesor Null!</em></p>
+        <p>Null levanta una mano envuelta en sombras digitales. El aire se llena de estática, y cada paso suyo parece romper el código del entorno.</p>
+        <p><strong>—Has llegado lejos, niña... pero el Código Maestro será mío. ¡Prepárate para el final!</strong></p>
+        <p>Ada entrecierra los ojos. Sabe que este momento ha llegado tras todo su entrenamiento, tras cada línea de código limpia que ha escrito.</p>
+        <p><em>—No voy a dejar que destruyas todo lo que hemos aprendido. Este mundo merece conocimiento... no olvido.</em></p>
+        <p>El Profesor Null lanza un ataque de código corrupto. Cadenas de ceros y unos envenenados vuelan por el aire, directos hacia ellos.</p>
+        <p><em>—¡Rápido, Ada! —dice Byte—. ¡Usa una función para contrarrestarlo!</em></p>
+        <p><strong>Reto:</strong> Escribe una función que imprima <em>"¡Código limpio!"</em> tres veces para neutralizar el ataque.</p>
+
+        <img id="profesornull" src="./Imagenes/Ada y Byte (8).png" alt="profesor null" class="active" style="width: 600px;">
+
+        <div class="example">
+            <p><strong>Ejemplo:</strong></p>
+            <pre>def imprimir_codigo_limpio():<br>    for i in range(3):<br>        print("¡Código limpio!")<br><br>imprimir_codigo_limpio()</pre>
+        </div>
+
+        <textarea id="codeInput" placeholder="Escribe tu código aquí..."></textarea>
+        <button onclick="runCode()">Ejecutar Código</button>
+        <p id="output"></p>
+        <button id="btnSiguiente" onclick="window.location.href='Capitulo6.html';" style="display:none;">Continuar</button>
+
+        <script>
+            function runCode() {
+                const code = document.getElementById('codeInput').value;
+                const output = document.getElementById('output');
+                const siguiente = document.getElementById('btnSiguiente');
+                if (code.includes('def imprimir_codigo_limpio():') &&
+                    code.includes('for') &&
+                    code.includes('range(3)') &&
+                    code.includes('print("¡Código limpio!")')) {
+                    output.innerHTML = '<span class="brillo destello">¡Muy bien! ¡Has debilitado al Profesor Null! 🎉</span>';
+                    output.innerHTML += '<br><span class="brillo">¡Tenemos que acabar de derrotarlo!</span>';
+                    siguiente.style.display = "inline-block";
+                    playVictorySound();
+                } else {
+                    output.textContent = "El código no es válido. Revisa las instrucciones.";
+                    siguiente.style.display = "none";
+                }
+            }
+
+            function playVictorySound() {
+                const audio = new Audio('victory.mp3');
+                audio.play();
+            }
+        </script>
+    </div>
+
+    <canvas class="particles"></canvas>
+    <canvas class="matrix"></canvas>
+</body>
+</html>

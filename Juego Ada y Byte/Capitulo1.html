@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ada y Byte: Capítulo 1 - ¡Hola, Mundo!</title>
+    <link rel="stylesheet" href="style1.css">
+    
+</head>
+<body>
+    <div class="intro">
+        <h1>¡Bienvenido a la Aventura de Ada y Byte!</h1>
+        <p>Embárcate en una aventura mágica donde aprenderás a programar y ayudarás a Byte a escapar de su prisión digital. Además, te enfrentarás a un villano muy poderoso: el Profesor Null.</p>
+        <img src="Imagenes/Ada y Byte.png" alt="Ada y Byte" style="width: 100%; border-radius: 20px; margin-bottom: 20px;">
+        <button onclick="startGame()" aria-label="Empezar la aventura">Empezar la aventura</button>
+        <button onclick="exitGame()" aria-label="Salir del juego">Salir</button>
+    </div>
+
+    <div class="container game">
+        <h1>Ada y Byte: Capítulo 1 - ¡Hola, Mundo!</h1>
+        <p>Ada encontró una tablet misteriosa en el desván de su abuela. Al encenderla, la pantalla se iluminó y apareció un mensaje:</p>
+        <p><strong>"¡Hola! Soy Byte. Estoy atrapado aquí. ¿Puedes ayudarme con código?"</strong></p>
+        <p>Al lado del mensaje, un recuadro mostraba:</p>
+        <p><code>print("Hello, world!")</code></p>
+        <p>—¿Qué es esto? —preguntó Ada.</p>
+        <p>—¡Es un hechizo mágico! —dijo una voz desde la pantalla—. ¡Es código! Si escribes bien las palabras, puedo moverme, saltar, hablar… ¡e incluso construir un cohete!</p>
+
+        <p><strong>Reto:</strong> Escribe el código correcto para saludar a Ada.</p>
+
+        <img id="adaybyte" src="./Imagenes/ 2.png" alt="Ada conoce a byte" style="display: none; width: 600px; margin: 20px auto; display: block;">
+
+        <div class="input-section" style="margin-top: 20px; text-align: center;">
+            <input type="text" id="codeInput" placeholder='Escribe: print("¡Hola, Ada!")'>
+            <button onclick="checkCode()" aria-label="Enviar código">Enviar</button>
+            <button id="retryButton" onclick="retryCode()" style="display: none;" aria-label="Intentar de nuevo">Intentar de nuevo</button>
+            <div class="message" id="message"></div>
+        </div>
+
+        <img id="byteImage" src="./Imagenes/byte.jpg" alt="Byte liberado" style="display: none; width: 300px; margin: 20px auto; display: block;">
+
+        <audio id="successSound" src="success.mp3" preload="auto"></audio>
+        <br>
+        <button id="nextChapter" onclick="goToChapter2()">Ir al Capítulo 2</button>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

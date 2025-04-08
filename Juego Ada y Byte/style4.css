@@ -1,0 +1,69 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background: linear-gradient(to top, #ffccbc, #ffe0b2);
+    color: #2c3e50;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden; /* Para evitar scroll con las partículas */
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1.2rem;
+}
+img {
+    width: 300px;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+button, input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 1rem 0.3rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #0288d1;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #026aa7;
+}
+#salida {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #00695c;
+}
+.brillo {
+    animation: brillar 2s infinite alternate;
+}
+@keyframes brillar {
+    from {
+        text-shadow: 0 0 5px #00f7ff;
+    }
+    to {
+        text-shadow: 0 0 20px #00f7ff;
+    }
+}
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1rem;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}

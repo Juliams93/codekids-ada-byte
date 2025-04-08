@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 6 - El enfrentamiento con el Profesor Null - Segunda Parte</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Segunda Parte: El Último Hechizo</h1>
+        <p>El templo se sacude violentamente mientras Null, debilitado pero aún peligroso, emerge de las sombras digitales una vez más. Su figura oscura parpadea con líneas de código corrupto.</p>
+        <p><em>—¡Ada, esta es nuestra última oportunidad! Debemos usar todo lo que sabemos para derrotarlo de una vez por todas —dice Byte—. ¡Corrige el hechizo digital y acaba con él!</em></p>
+        <p><strong>Corrige el código para que Null pierda poder:</strong></p>
+        <p>Null lanza un rugido ensordecedor, y fragmentos de datos corruptos comienzan a volar por el aire. Ada y Byte se miran con determinación, sabiendo que no hay margen para errores. El tiempo parece detenerse mientras Ada toma aire y Byte ajusta su visor digital.</p>
+        <p><em>—¡Confío en ti, Ada! —grita Byte—. ¡El destino del mundo digital está en tus manos!</em></p>
+        <p>El suelo bajo sus pies comienza a fracturarse, y un brillo verde emana del núcleo del templo. Es ahora o nunca. ¡El código debe ser perfecto!</p>
+
+        <textarea id="codigoNull" rows="6" cols="60" placeholder="Escribe tu código aquí..."></textarea>
+        <br>
+        <button onclick="verificarAtaque()">Lanzar hechizo</button>
+        <p id="respuestaNull"></p>
+        
+        <img id="profesornull" src="./Imagenes/Ada y Byte (6).png" alt="profesor null" class="active" style="width: 600px;">
+        <br>
+        <audio id="sonidoVictoria" src="victory.mp3" preload="auto"></audio>
+        <br>
+        <button onclick="window.location.href='Epilogo.html'" style="display:none;" id="btnFinal">Ir al Capítulo 7: El Código Final</button>
+    </div>
+    <canvas class="matrix"></canvas>
+    <script>
+        function verificarAtaque() {
+    const codigo = document.getElementById("codigoNull").value.trim(); 
+    const respuesta = document.getElementById("respuestaNull");
+    const btnFinal = document.getElementById("btnFinal");
+    const sonido = document.getElementById("sonidoVictoria");
+
+    const hechizoCorrecto = [
+        "function ataqueFinal(poder)",
+        "if (poder > 9000)",
+        "return \"¡Null pierde energía!\"",
+        "ataqueFinal(9001)"
+    ].every(fragmento => codigo.includes(fragmento));
+
+    if (hechizoCorrecto) {
+        respuesta.innerHTML = '<span class="brillo">⚡ ¡Null ha sido derrotado! El código vuelve a fluir por el mundo.</span>';
+        sonido.play();
+        btnFinal.style.display = "inline-block";
+    } else {
+        respuesta.innerText = "😨 El hechizo no es lo suficientemente fuerte... ¿Probamos otra vez?";
+    }
+}
+
+const canvas = document.querySelector(".matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const fontSize = 16;
+const columns = Math.floor(canvas.width / fontSize);
+
+const drops = Array(columns).fill(0);
+
+function drawMatrix() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff00";
+    ctx.font = `${fontSize}px monospace`;
+
+    drops.forEach((y, i) => {
+        const text = characters[Math.floor(Math.random() * characters.length)];
+        ctx.fillText(text, i * fontSize, y * fontSize);
+
+        if (y * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+        } else {
+            drops[i]++;
+        }
+    });
+}
+
+setInterval(drawMatrix, 35);
+    </script>
+</body>
+</html>

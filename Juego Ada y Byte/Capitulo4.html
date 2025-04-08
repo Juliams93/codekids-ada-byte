@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 4 - La Montaña de los bucles</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Capítulo 4: La Montaña de los Bucles</h1>
+        <p>Después de cruzar el Bosque de los Enigmas, Ada y Byte llegaron al pie de una montaña cubierta de nieve digital. Brillaba con líneas de código en movimiento.</p>
+        <p><em>—Esta es la Montaña de los Bucles —explicó Byte—. Solo quienes entienden cómo repetir instrucciones pueden escalarla.</em></p>
+        <p>Cada escalón invisible requería una orden precisa… Una repetición exacta.</p>
+
+        <p><strong>—Necesitamos repetir “¡Sube!” cinco veces para avanzar —dijo Byte con una chispa en los ojos—. ¿Puedes escribir el código correcto?</strong></p>
+
+        <textarea id="codigoInput" rows="6" cols="50" placeholder="for i in range(5): print('¡Sube!')"></textarea>
+        <br>
+        <button onclick="ejecutarCodigo()">Ejecutar código</button>
+        <p id="salida"></p>
+        
+        <img id="montañacodigo" src="./Imagenes/Ada y Byte (3).png" alt="Montaña mágica" style="width: 800px; box-shadow: 0 0 20px 10px rgba(223, 100, 212, 0.8);" class="active">
+        <br>
+        <audio id="soundEscalar" src="climb.mp3" preload="auto"></audio>
+        <br>
+        <button onclick="window.location.href='capitulo5.html'" style="display:none;" id="btnSiguiente">Ir al Capítulo 5: El Templo del Código Maestro</button>
+        
+        <p><strong>¡Recuerda!</strong> Usa el bucle correcto para escalar la montaña. Byte te ayudará a encontrar el camino.</p>
+        <p><em>¡Buena suerte!</em></p>
+    </div>
+
+    <!-- Contenedor para las partículas -->
+    <div id="snowContainer"></div>
+
+    <script>
+        function ejecutarCodigo() {
+            const input = document.getElementById("codigoInput").value;
+            const salida = document.getElementById("salida");
+            const siguiente = document.getElementById("btnSiguiente");
+            const sonido = document.getElementById("soundEscalar");
+
+            // Limpieza básica
+            const normalizado = input.trim().replace(/\s+/g, ' ').toLowerCase();
+
+            const correcto = "for i in range(5): print('¡sube!')";
+            if (normalizado === correcto) {
+                salida.innerHTML = '<span class="brillo">¡Muy bien! ¡Has escalado la montaña! 🧗‍♀️</span>';
+                siguiente.style.display = "inline-block";
+                sonido.play();
+            } else {
+                salida.innerText = "Hmm... ese código no parece correcto. ¡Vuelve a intentarlo!";
+                siguiente.style.display = "none";
+            }
+        }
+
+        // Generar partículas de nieve
+        function crearNieve() {
+            const snowContainer = document.getElementById("snowContainer");
+            for (let i = 0; i < 100; i++) {
+                const snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                snowflake.style.left = Math.random() * 100 + "vw";
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+                snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+                snowflake.innerHTML = "❄";
+                snowContainer.appendChild(snowflake);
+
+                // Eliminar copos después de caer
+                snowflake.addEventListener("animationend", () => {
+                    snowflake.remove();
+                });
+            }
+        }
+
+        setInterval(crearNieve, 500);
+    </script>
+</body>
+</html>

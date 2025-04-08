@@ -1,0 +1,70 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to top right, #2c3e50, #4ca1af);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .container {
+    background: #ffffffdd;
+    color: #2c3e50;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #4ca1af;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  button:hover {
+    background-color: #398d98;
+  }
+
+  .message {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  #laberintoImg {
+    display: none;
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 25px 5px #00ffddaa;
+    animation: abrirPuerta 2s ease-out forwards;
+  }
+
+  @keyframes abrirPuerta {
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 1; transform: scale(1);}
+  }
+
+  audio {
+    display: none;
+  }
+
+  #siguiente {
+    display: none;
+    margin-top: 20px;
+  }

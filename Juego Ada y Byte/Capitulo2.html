@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ada y Byte: Capítulo 2</title>
+  <link rel="stylesheet" href="style2.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Capítulo 2: El Laberinto de los Códigos Perdidos</h1>
+    <p><strong>Byte</strong>, aún brillando con chispas de energía digital, se posa en el hombro de <strong>Ada</strong>.</p>
+    <p>—Gracias por liberarme, pero… no tenemos tiempo. El <em>Profesor Null</em> sigue aquí. Él me encerró, y si no lo detenemos, borrará todo este mundo.</p>
+    <p><em>Ada traga saliva. No esperaba que su tarde en el desván terminara salvando mundos.</em></p>
+    <p>—¿Y qué podemos hacer? —pregunta ella.</p>
+    <p>—Primero, encontrar el <strong>Fragmento del Código Maestro</strong>. Está escondido en el <strong>Laberinto de los Códigos Perdidos</strong>. Pero solo se abre si conoces el nombre del héroe que lo desafía…</p>
+    <p>Byte la mira muy serio.</p>
+    <p><strong>—¿Sabes cómo se guarda un nombre en código, Ada?</strong></p>
+
+    <p><strong>¡Tu misión!</strong> Escribe una variable llamada <code>nombreSecreto</code> con tu nombre mágico, y luego muéstralo usando <code>print(nombreSecreto)</code>.</p>
+
+    <textarea id="codigoInput" rows="4" placeholder='Escribe tu código aquí, por ejemplo:\nnombreSecreto = "EstrellaFeroz"\nprint(nombreSecreto)'></textarea>
+    <br>
+    <button onclick="verificarCodigo()">Enviar</button>
+    <button onclick="reiniciar()">Intentar de nuevo</button>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+    <img id="laberinto" src="./Imagenes/Ada y Byte (4).png" alt="laberinto" class="active" style="width: 600px; animation: zoomIn 1.5s ease-out;">
+    <style>
+      @keyframes zoomIn {
+        from {
+        transform: scale(0.5);
+        opacity: 0;
+        }
+        to {
+        transform: scale(1);
+        opacity: 1;
+        }
+      }
+    </style>
+    </div>
+
+
+    <div class="message" id="mensaje"></div>
+    <img id="laberintoImg" src="puerta-magica.gif" alt="El laberinto se abre">
+    <audio id="sonidoExito" src="exito.mp3"></audio>
+    <br>
+    <button id="siguiente" onclick="irAlCapitulo3()">Entrar al laberinto</button>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>

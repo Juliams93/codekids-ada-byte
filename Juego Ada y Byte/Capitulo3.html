@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada y Byte - Capítulo 3</title>
+    <link rel="stylesheet" href="style3.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Capítulo 3: El Bosque de los Enigmas Condicionales</h1>
+    <p>Ada avanzó con cuidado, siguiendo a Byte entre raíces que parecían teclas y ramas que susurraban comandos olvidados.
+        El laberinto se había transformado en un bosque digital, donde los árboles eran líneas de código y las hojas, bits brillantes.
+        Byte, el pequeño compañero de Ada, guiaba su camino con destellos de luz azul.
+    </p>
+    <p>El laberinto se había transformado en un bosque mágico lleno de secretos por descubrir.</p>
+    <p>Byte se detuvo frente a un árbol enorme y brillante, cubierto de runas digitales.</p>
+    <p><em>—Este bosque protege la entrada al Templo del Código Maestro —dijo—. Antes de llegar al fragmento, el bosque quiere saber si estás lista.</em></p>
+      
+    <p>La corteza del árbol se abrió como una puerta y una voz profunda resonó:</p>
+    <p><strong>—“Si tienes más de 8 años, puedes pasar. Si no… ¡espera un poco más!”</strong></p>
+      
+    <p>Ada pensó un segundo… y luego escribió su respuesta en la tablet mágica.</p>
+        <p><strong>¿Cuál es tu edad, viajero?</strong></p>
+        <input type="number" id="edadInput" placeholder="Tu edad">
+        <br>
+        <button onclick="verificarEdad()">Enviar respuesta</button>
+        <div class="message" id="mensaje"></div>
+        <img id="arbolImagen" src="./Imagenes/bosquemagico.png" alt="Bosque de los enigmas" class="active" style="width: 400px;">
+        <audio id="successSound" src="success.mp3" preload="auto"></audio>
+        <br>
+        <button id="capitulo4Button" onclick="irACapitulo4()" disabled>Ir al Capítulo 4</button>
+        <div id="sparkleMessage" class="sparkles" style="display: none;">¡✨Magia desbloqueada!✨</div>
+      </div>
+      
+      <script>
+      function verificarEdad() {
+          const edad = parseInt(document.getElementById('edadInput').value);
+          const mensaje = document.getElementById('mensaje');
+          const successSound = document.getElementById('successSound');
+          const sparkle = document.getElementById('sparkleMessage');
+          const capitulo4Btn = document.getElementById('capitulo4Button');
+      
+          if (edad > 8) {
+              mensaje.innerText = '¡Has pasado la prueba del bosque!';
+              successSound.play();
+              sparkle.style.display = 'block';
+              capitulo4Btn.disabled = false;
+          } else {
+              mensaje.innerText = 'Todavía no puedes avanzar. ¡Inténtalo de nuevo más adelante!';
+          }
+      }
+      function irACapitulo4() {
+          window.location.href = 'capitulo4.html';
+      }
+      </script>
+</body>
+</html>

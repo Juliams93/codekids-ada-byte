@@ -1,0 +1,87 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    padding: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.container, .intro {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+}
+.intro {
+    display: block;
+}
+.game {
+    display: none;
+}
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+.message {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #008000;
+    min-height: 30px;
+    transition: opacity 0.3s ease;
+}
+#byteImage {
+    width: 300px;
+    margin-top: 30px;
+    opacity: 0;
+    transition: all 1s ease;
+    border-radius: 20px;
+}
+#byteImage.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+input {
+    padding: 10px;
+    width: 80%;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+#nextChapter {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#nextChapter.visible {
+    opacity: 1;
+}
+/* New effect: glowing border for buttons */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+}
+/* New effect: floating animation for the intro container */
+.intro {
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
